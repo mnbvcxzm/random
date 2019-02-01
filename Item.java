@@ -12,6 +12,8 @@ public class Item {
   private double weight;
   private int damage; 
   private int mana;
+  private int spattak;
+  private int spdefense;
   
   //Default constructor
   public Item() {
@@ -27,9 +29,10 @@ public class Item {
     weapon = "Default";
     refreshments = "Default";
     defense = "Default";
-    
-    
+    spattak = 10;
+    spdefense = 10;
   }
+  
   
   public void setDefense(String m){
     defense = m;
@@ -118,9 +121,19 @@ public class Item {
     return mana;
   }
   
+  public void SetSpattak(int a){
+    spattak = a;
+  }
+  public int getSpattak(){
+    return spattak;
+  }
   
-  
-  
+  public void setSpdefense(int b){
+    spdefense = b;
+  }
+  public int getSpdefense(){
+    return spdefense;
+  }
 }
 
 

@@ -5,6 +5,8 @@ public abstract class Character {
     private int MP;
     private int attack;
     private int speed;
+    private int SPATK;
+    private int SPDEF;
     private String name;
     private String gender;
     private String wepon;
@@ -16,6 +18,8 @@ public abstract class Character {
     public int getAttack() { return attack; }
     
     public int getSpeed() { return speed; }
+    
+    public int getSPATK() { return SPATK; }
     
     public String getName() { return name; }
     
@@ -33,6 +37,10 @@ public abstract class Character {
     
     public void setSpeed(int s) { speed = s; }
     
+    public void setSPATK(int q) { SPATK = q; }
+    
+    public void setSPDEF(int y) { SPDEF = y; }
+    
     public void setWepon(String z){wepon = z;}
     
     public void setName(String n) {name = n; }
@@ -45,6 +53,8 @@ public abstract class Character {
         MP = 2000;
         attack = 50;
         speed = 50;
+        SPATK = 100;
+        SPDEF = 100;
         name = "Kenny";
         gender = "Male";
         wepon = "Bow And Arrow";
@@ -53,11 +63,13 @@ public abstract class Character {
     //Default Constructor
 
     //Constructor with 6 parameters: HP, MP, attack, speed, name, gender
-    public Character(int h, int m, int a, int s, String n, String g, String z) {
+    public Character(int h, int m, int a, int s, int q, int y, String n, String g, String z) {
         HP  =  h ;
         MP = m;
         attack = a;
         speed = s;
+        SPATK = q;
+        SPDEF = y;
         name = n;
         gender = g;
         wepon = z;

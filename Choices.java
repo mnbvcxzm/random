@@ -7,8 +7,6 @@ public class Choices {
 	}
 
 
-
-
 	public String getResponse(String statement)
 	{
 	String response = " ";

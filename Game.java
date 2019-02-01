@@ -10,7 +10,7 @@ public class Game {
       int intTwo;
       int intThree;
 
-      Item[] inventory = new Item[12];
+      Item[] inventory = new Item[13];
         
         
         
@@ -26,6 +26,7 @@ public class Game {
     inventory[9] = new Item();
     inventory[10] = new Item();
     inventory[11] = new Item();
+    inventory[12] = new Item();
     
     
     
@@ -224,6 +225,26 @@ public class Game {
 
     System.out.println(" ");
     
+    inventory[12].setRefreshments("Invincible");
+    inventory[12].setDurability(100);
+    inventory[12].setPrice(100.00);
+    inventory[12].setDescription("Use For Ten Seconds Of Not Taking Damage");
+    inventory[12].setWeight(20.00);
+    inventory[12].setMana(50);
+    System.out.println(" ");
+    System.out.println("Refreshments:" + inventory[12].getRefreshments());
+    System.out.println("Durability:" + inventory[12].getDurability());
+    System.out.println("Price:" + inventory[12].getPrice());
+    System.out.println("Description:" + inventory[12].getDescription());
+    System.out.println("Weight:" + inventory[12].getWeight());
+    System.out.println("Mana:" + inventory[12].getMana());
+    
+    System.out.println(" ");
+    
+    
+    
+    
+    
          Choices maggie = new Choices();
 		
 		System.out.println (maggie.getGreeting());
@@ -233,19 +254,19 @@ public class Game {
     
     
   
-  Character landy = new Archer(2000, 2000, 50, 50, "Kenny", "Male", inventory[4].getWeapon());
+  Character landy = new Archer(2000, 2000, 50, 50,200,200, "Kenny", "Male", inventory[4].getWeapon());
   		System.out.println("Choose A Name Of The Character One: "  );
         landy.setName(statement = in.nextLine());
         
-  Character captainCrunch = new Warrior(2000, 2000, 50, 50, "Marcus", "Male", inventory[2].getWeapon());
+  Character captainCrunch = new Warrior(2000, 2000, 50, 50,200,200, "Marcus", "Male", inventory[2].getWeapon());
          System.out.println("Choose A Name Of The Character Two: "  );
         captainCrunch.setName(statement = in.nextLine());
   
-  Character bestTeacher = new Mage(2000, 2000, 50, 50, "Brian", "Male", inventory[5].getWeapon());
+  Character bestTeacher = new Mage(2000, 2000, 50, 50,200,200, "Brian", "Male", inventory[5].getWeapon());
         System.out.println("Choose A Name Of The Character Three: "  );
         bestTeacher.setName(statement = in.nextLine());
         
-  Character bestTeachersFamily = new Valkyrie(2000, 2000, 50, 50, "TeachersPet", "Female", inventory[10].getWeapon());
+  Character bestTeachersFamily = new Valkyrie(2000, 2000, 50, 50,200,200, "TeachersPet", "Female", inventory[10].getWeapon());
         System.out.println("Choose A Name Of The Character Four: "  );
         bestTeachersFamily.setName(statement = in.nextLine());
 
@@ -288,9 +309,8 @@ System.out.println(" ");
         System.out.println(" MP: " + bestTeachersFamily.getMP());
         System.out.print("Attack: " + bestTeachersFamily.getAttack());
         System.out.println(" Speed: " + bestTeachersFamily.getSpeed());
-        
-        
         System.out.println(" ");
+		
 		
 		while (!statement.equals("Y"))
 		{
@@ -326,9 +346,8 @@ System.out.println(" ");
         
         bestTeachersFamily.setHP(intTwo);
         bestTeachersFamily.setMP(intTwo);
-        System.out.println(" ");
-
         
+        System.out.println(" ");
         System.out.println(" ");
         
         System.out.println(captainCrunch.getName() + maggie.getResponse(statement) + inventory[2].getWeapon() + " "  +  bestTeachersFamily.getName() + "!");
@@ -386,7 +405,7 @@ System.out.println(" ");
         
 
         
-        
+          
         
     }
     
